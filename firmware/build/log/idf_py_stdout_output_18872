@@ -1,0 +1,27 @@
+Command: cmake -G Ninja -B D:\example\projects\Esp32Walker\firmware\build -DPYTHON_DEPS_CHECKED=1 -DPYTHON=C:\Users\jwgbo\.espressif\python_env\idf6.1_py3.10_env\Scripts\python.exe -DESP_PLATFORM=1 -DIDF_TARGET=esp32s3 -DCCACHE_ENABLE=True D:\example\projects\Esp32Walker\firmware
+-- Found Git: C:/Program Files/Git/cmd/git.exe (found version "2.50.0.windows.1")
+-- Minimal build - OFF
+-- ccache will be used for faster recompilation
+-- The C compiler identification is GNU 15.2.0
+-- The CXX compiler identification is GNU 15.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: C:/Users/jwgbo/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc.exe
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Users/jwgbo/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Users/jwgbo/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32s3-elf-g++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- git rev-parse returned 'fatal: not a git repository (or any of the parent directories): .git'
+-- Could not use 'git describe' to determine PROJECT_VER.
+-- Building ESP-IDF components for target esp32s3
+NOTE: Dependencies lock doesn't exist, solving dependencies.
+.NOTE: Updating lock file at 
+D:\example\projects\Esp32Walker\firmware\dependencies.lock
+NOTE: Processing 1 dependencies:
+NOTE: [1/1] idf (6.1.0)
+-- Configuring incomplete, errors occurred!

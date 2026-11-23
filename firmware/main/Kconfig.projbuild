@@ -1,0 +1,161 @@
+menu "Esp32Walker App Config"
+
+    choice APP_ROLE
+        prompt "Board role"
+        default APP_ROLE_MASTER
+        config APP_ROLE_MASTER
+            bool "Master (ES3N28P interaction board)"
+        config APP_ROLE_MOTION
+            bool "Motion (GOOUUU ESP32-S3 CAM board)"
+    endchoice
+
+    config APP_CHASSIS_TYPE
+        string "Chassis type (diff2 / track / mecanum)"
+        default "diff2"
+
+    config APP_ENABLE_CAMERA
+        bool "Enable camera capture (OV2640 / OV3660)"
+        default n
+
+    choice APP_CAMERA_SENSOR
+        prompt "Camera sensor model"
+        default APP_CAMERA_SENSOR_AUTO
+        config APP_CAMERA_SENSOR_AUTO
+            bool "Auto detect (OV2640 / OV3660)"
+        config APP_CAMERA_SENSOR_OV2640
+            bool "OV2640"
+        config APP_CAMERA_SENSOR_OV3660
+            bool "OV3660"
+    endchoice
+
+    config APP_ENABLE_AUDIO
+        bool "Enable I2S audio capture/playback"
+        default n
+
+    config APP_ENABLE_WAKE
+        bool "Enable ESP-SR wake word (requires esp-sr component)"
+        default n
+
+    config APP_ENABLE_STATUS_LED
+        bool "Enable status LED"
+        default y
+
+    config APP_WIFI_SSID
+        string "Wi-Fi SSID"
+        default "your-ssid"
+
+    config APP_WIFI_PASS
+        string "Wi-Fi password"
+        default "your-pass"
+
+    config APP_SERVER_IP
+        string "Center host IP address"
+        default "192.168.1.100"
+
+    config APP_SERVER_PORT
+        int "Center host TCP port"
+        default 8888
+
+    config APP_PROX_STOP_CM
+        int "Obstacle stop distance (cm)"
+        default 15
+
+    config APP_PROX_SLOW_CM
+        int "Obstacle slow-down distance (cm)"
+        default 30
+
+    # --- 电机引脚 ---
+    config APP_MOTOR1_PWM_GPIO
+        int "Motor1 PWM GPIO"
+        default 4
+    config APP_MOTOR1_IN1_GPIO
+        int "Motor1 IN1 GPIO"
+        default 8
+    config APP_MOTOR1_IN2_GPIO
+        int "Motor1 IN2 GPIO"
+        default 9
+    config APP_MOTOR2_PWM_GPIO
+        int "Motor2 PWM GPIO"
+        default 5
+    config APP_MOTOR2_IN1_GPIO
+        int "Motor2 IN1 GPIO"
+        default 10
+    config APP_MOTOR2_IN2_GPIO
+        int "Motor2 IN2 GPIO"
+        default 11
+    config APP_MOTOR3_PWM_GPIO
+        int "Motor3 PWM GPIO (mecanum)"
+        default 6
+    config APP_MOTOR3_IN1_GPIO
+        int "Motor3 IN1 GPIO (mecanum)"
+        default 12
+    config APP_MOTOR3_IN2_GPIO
+        int "Motor3 IN2 GPIO (mecanum)"
+        default 13
+    config APP_MOTOR4_PWM_GPIO
+        int "Motor4 PWM GPIO (mecanum)"
+        default 7
+    config APP_MOTOR4_IN1_GPIO
+        int "Motor4 IN1 GPIO (mecanum)"
+        default 14
+    config APP_MOTOR4_IN2_GPIO
+        int "Motor4 IN2 GPIO (mecanum)"
+        default 15
+
+    # --- 障碍感知 ---
+    config APP_USE_TOF
+        bool "Use VL53L0X TOF (I2C) instead of ultrasonic"
+        default n
+    config APP_ULTRASONIC_TRIG_GPIO
+        int "Ultrasonic Trig GPIO"
+        default 16
+    config APP_ULTRASONIC_ECHO_GPIO
+        int "Ultrasonic Echo GPIO"
+        default 17
+    config APP_I2C_SDA_GPIO
+        int "I2C SDA GPIO (TOF)"
+        default 41
+    config APP_I2C_SCL_GPIO
+        int "I2C SCL GPIO (TOF)"
+        default 42
+
+    # --- IMU ---
+    config APP_ENABLE_IMU
+        bool "Enable IMU (MPU6050 / MPU9250 on I2C)"
+        default y
+    config APP_IMU_TYPE
+        int "IMU type (0=MPU6050, 1=MPU9250)"
+        default 0
+    config APP_IMU_ADDR
+        hex "IMU I2C address"
+        default 0x68
+
+    # --- 音频 ---
+    config APP_MIC_WS_GPIO
+        int "INMP441 I2S WS GPIO"
+        default 2
+    config APP_MIC_SCK_GPIO
+        int "INMP441 I2S SCK GPIO"
+        default 3
+    config APP_MIC_SD_GPIO
+        int "INMP441 I2S SD GPIO"
+        default 46
+    config APP_SPK_BCLK_GPIO
+        int "MAX98357A I2S BCLK GPIO"
+        default 18
+    config APP_SPK_LRC_GPIO
+        int "MAX98357A I2S LRC GPIO"
+        default 19
+    config APP_SPK_DIN_GPIO
+        int "MAX98357A I2S DIN GPIO"
+        default 20
+
+    # --- 按钮 / LED ---
+    config APP_BTN_GPIO
+        int "Capture button GPIO"
+        default 0
+    config APP_LED_GPIO
+        int "Status LED GPIO"
+        default 21
+
+endmenu

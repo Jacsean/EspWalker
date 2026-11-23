@@ -1,0 +1,14 @@
+flowchart LR
+  decisions_dual_board_master_slave_espnow["decisions/dual-board-master-slave-espnow"]
+  pitfalls_idf_v6_espnow_not_a_component["pitfalls/idf-v6-espnow-not-a-component"]
+  pitfalls_idf_v6_wifi_if_sta_removed["pitfalls/idf-v6-wifi-if-sta-removed"]
+  pitfalls_idf_v6_cjson_managed_component["pitfalls/idf-v6-cjson-managed-component"]
+  pitfalls_idf_v6_main_explicit_deps["pitfalls/idf-v6-main-explicit-deps"]
+  decisions_dual_board_master_slave_espnow --> pitfalls_idf_v6_espnow_not_a_component
+  decisions_dual_board_master_slave_espnow --> pitfalls_idf_v6_wifi_if_sta_removed
+  pitfalls_idf_v6_cjson_managed_component --> pitfalls_idf_v6_main_explicit_deps
+  pitfalls_idf_v6_cjson_managed_component --> pitfalls_idf_v6_espnow_not_a_component
+  pitfalls_idf_v6_espnow_not_a_component --> pitfalls_idf_v6_wifi_if_sta_removed
+  pitfalls_idf_v6_espnow_not_a_component --> pitfalls_idf_v6_main_explicit_deps
+  pitfalls_idf_v6_main_explicit_deps --> pitfalls_idf_v6_cjson_managed_component
+  pitfalls_idf_v6_wifi_if_sta_removed --> pitfalls_idf_v6_espnow_not_a_component

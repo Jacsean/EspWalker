@@ -1,0 +1,19 @@
+{
+  "listen": {
+    "host": "0.0.0.0",
+    "port": 8888
+  },
+  "llm": {
+    "enabled": false,
+    "base_url": "https://api.openai.com/v1",
+    "api_key": "",
+    "model": "gpt-4o-mini",
+    "system_prompt": "你是一只可爱的桌面机器人，回答简短、友好。"
+  },
+  "asr": {
+    "engine": "none"
+  },
+  "tts": {
+    "engine": "none"
+  }
+}

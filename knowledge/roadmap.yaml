@@ -1,0 +1,5 @@
+# 技术路线数据源。字段说明见 references/roadmap-example.yaml
+- id: initial
+  label: 初始方案
+  date: 2026-11-01
+  status: active

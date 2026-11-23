@@ -1,0 +1,146 @@
+Command: ninja all
+[1/119] Linking C static library esp-idf\esp_stdio\libesp_stdio.a
+[2/119] Building C object esp-idf/esp_driver_rmt/CMakeFiles/__idf_esp_driver_rmt.dir/src/rmt_encoder_copy.c.obj
+[3/119] Building C object esp-idf/esp_driver_sdm/CMakeFiles/__idf_esp_driver_sdm.dir/src/sdm.c.obj
+[4/119] Building C object esp-idf/esp_driver_rmt/CMakeFiles/__idf_esp_driver_rmt.dir/src/rmt_rx.c.obj
+[5/119] Building C object esp-idf/esp_driver_rmt/CMakeFiles/__idf_esp_driver_rmt.dir/src/rmt_encoder_simple.c.obj
+[6/119] Linking C static library esp-idf\xtensa\libxtensa.a
+[7/119] Building C object esp-idf/esp_driver_rmt/CMakeFiles/__idf_esp_driver_rmt.dir/src/rmt_tx.c.obj
+[8/119] Building C object esp-idf/esp_driver_touch_sens/CMakeFiles/__idf_esp_driver_touch_sens.dir/hw_ver2/touch_version_specific.c.obj
+[9/119] Building C object esp-idf/esp_driver_tsens/CMakeFiles/__idf_esp_driver_tsens.dir/src/temperature_sensor.c.obj
+[10/119] Building C object esp-idf/esp_driver_touch_sens/CMakeFiles/__idf_esp_driver_touch_sens.dir/common/touch_sens_common.c.obj
+[11/119] Building C object esp-idf/esp_driver_twai/CMakeFiles/__idf_esp_driver_twai.dir/esp_twai_onchip.c.obj
+[12/119] Building C object esp-idf/esp_driver_twai/CMakeFiles/__idf_esp_driver_twai.dir/esp_twai.c.obj
+[13/119] Building C object esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_netif_glue.c.obj
+[14/119] Building C object esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth.c.obj
+[15/119] Building C object esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/src/esp_hidd.c.obj
+[16/119] Building C object esp-idf/esp_driver_twai/CMakeFiles/__idf_esp_driver_twai.dir/twai_frame_queue.c.obj
+[17/119] Building C object esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/src/esp_hidh.c.obj
+[18/119] Building C object esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/phy/esp_eth_phy_802_3.c.obj
+[19/119] Linking C static library esp-idf\esp_hal_sd\libesp_hal_sd.a
+[20/119] Linking C static library esp-idf\esp_driver_spi\libesp_driver_spi.a
+[21/119] Linking C static library esp-idf\esp_hal_ledc\libesp_hal_ledc.a
+[22/119] Linking C static library esp-idf\protobuf-c\libprotobuf-c.a
+[23/119] Building C object esp-idf/espnow/CMakeFiles/__idf_espnow.dir/espnow.c.obj
+[24/119] Building C object esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/src/esp_hid_common.c.obj
+[25/119] Linking C static library esp-idf\esp_driver_i2c\libesp_driver_i2c.a
+[26/119] Linking C static library esp-idf\esp_hal_twai\libesp_hal_twai.a
+[27/119] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io.c.obj
+[28/119] Linking C static library esp-idf\unity\libunity.a
+[29/119] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_common.c.obj
+[30/119] Linking C static library esp-idf\console\libconsole.a
+[31/119] Linking C static library esp-idf\esp_hal_cam\libesp_hal_cam.a
+[32/119] Linking C static library esp-idf\esp_hal_mcpwm\libesp_hal_mcpwm.a
+[33/119] Linking C static library esp-idf\esp_hal_pcnt\libesp_hal_pcnt.a
+[34/119] Linking C static library esp-idf\esp_hal_rmt\libesp_hal_rmt.a
+[35/119] Linking C static library esp-idf\esp_hal_lcd\libesp_hal_lcd.a
+[36/119] Linking C static library esp-idf\esp_https_server\libesp_https_server.a
+[37/119] Linking C static library esp-idf\esp_driver_ledc\libesp_driver_ledc.a
+[38/119] Linking C static library esp-idf\sdmmc\libsdmmc.a
+[39/119] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ssd1306.c.obj
+[40/119] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ops.c.obj
+[41/119] Linking C static library esp-idf\protocomm\libprotocomm.a
+[42/119] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_st7789.c.obj
+[43/119] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/i2c/esp_lcd_panel_io_i2c.c.obj
+[44/119] Linking C static library esp-idf\wear_levelling\libwear_levelling.a
+[45/119] Linking C static library esp-idf\motor\libmotor.a
+[46/119] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/spi/esp_lcd_panel_io_spi.c.obj
+[47/119] Linking C static library esp-idf\esp_driver_sd_intf\libesp_driver_sd_intf.a
+[48/119] Linking C static library esp-idf\esp_driver_sdspi\libesp_driver_sdspi.a
+[49/119] Building C object esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/proto-c/esp_local_ctrl.pb-c.c.obj
+[50/119] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/rgb/esp_lcd_panel_rgb.c.obj
+[51/119] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/i80/esp_lcd_panel_io_i80.c.obj
+[52/119] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/diskio/diskio_rawflash.c.obj
+[53/119] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/diskio/diskio_wl.c.obj
+[54/119] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/diskio/diskio.c.obj
+[55/119] Building C object esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_handler.c.obj
+[56/119] Building C object esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_transport_httpd.c.obj
+[57/119] Building C object esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl.c.obj
+[58/119] Linking C static library esp-idf\esp_driver_sdmmc\libesp_driver_sdmmc.a
+[59/119] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/diskio/diskio_bdl.c.obj
+[60/119] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/src/ffunicode.c.obj
+[61/119] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/src/ff.c.obj
+[62/119] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/port/freertos/ffsystem.c.obj
+[63/119] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/diskio/diskio_sdmmc.c.obj
+[64/119] Building C object esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir/xtensa_perfmon_masks.c.obj
+[65/119] Building C object esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir/xtensa_perfmon_access.c.obj
+[66/119] Building C object esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir/xtensa_perfmon_apis.c.obj
+[67/119] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/vfs/vfs_fat_bdl.c.obj
+[68/119] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/vfs/vfs_fat.c.obj
+[69/119] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/vfs/vfs_fat_spiflash.c.obj
+[70/119] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/vfs/vfs_fat_sdmmc.c.obj
+[71/119] Building C object esp-idf/rt/CMakeFiles/__idf_rt.dir/FreeRTOS_POSIX_mqueue.c.obj
+[72/119] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_cache.c.obj
+[73/119] Building C object esp-idf/rt/CMakeFiles/__idf_rt.dir/FreeRTOS_POSIX_utils.c.obj
+[74/119] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_check.c.obj
+[75/119] Linking C static library esp-idf\comm\libcomm.a
+[76/119] Linking C static library esp-idf\camera\libcamera.a
+[77/119] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs_api.c.obj
+[78/119] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_gc.c.obj
+[79/119] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_hydrogen.c.obj
+[80/119] Linking C static library esp-idf\chassis\libchassis.a
+[81/119] Linking C static library esp-idf\audio\libaudio.a
+[82/119] Linking C static library esp-idf\espnow\libespnow.a
+[83/119] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_nucleus.c.obj
+[84/119] Linking C static library esp-idf\proximity\libproximity.a
+[85/119] Linking C static library esp-idf\espressif__cjson\libespressif__cjson.a
+[86/119] Linking C static library esp-idf\imu\libimu.a
+[87/119] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/esp_spiffs.c.obj
+[88/119] Linking C static library esp-idf\esp_driver_gptimer\libesp_driver_gptimer.a
+[89/119] Linking C static library esp-idf\cmock\libcmock.a
+[90/119] Linking C static library esp-idf\esp_driver_mcpwm\libesp_driver_mcpwm.a
+[91/119] Linking C static library esp-idf\driver\libdriver.a
+[92/119] Linking C static library esp-idf\esp_blockdev_util\libesp_blockdev_util.a
+[93/119] Linking C static library esp-idf\esp_driver_rmt\libesp_driver_rmt.a
+[94/119] Linking C static library esp-idf\esp_driver_cam\libesp_driver_cam.a
+[95/119] Linking C static library esp-idf\esp_driver_sdm\libesp_driver_sdm.a
+[96/119] Linking C static library esp-idf\esp_driver_tsens\libesp_driver_tsens.a
+[97/119] Linking C static library esp-idf\esp_driver_pcnt\libesp_driver_pcnt.a
+[98/119] Linking C static library esp-idf\esp_driver_touch_sens\libesp_driver_touch_sens.a
+[99/119] Linking C static library esp-idf\esp_driver_twai\libesp_driver_twai.a
+[100/119] Linking C static library esp-idf\esp_eth\libesp_eth.a
+[101/119] Linking C static library esp-idf\esp_hid\libesp_hid.a
+[102/119] Linking C static library esp-idf\rt\librt.a
+[103/119] Linking C static library esp-idf\esp_local_ctrl\libesp_local_ctrl.a
+[104/119] Linking C static library esp-idf\esp_lcd\libesp_lcd.a
+[105/119] Linking C static library esp-idf\perfmon\libperfmon.a
+[106/119] Linking C static library esp-idf\spiffs\libspiffs.a
+[107/119] Linking C static library esp-idf\fatfs\libfatfs.a
+[108/119] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/cmd_dispatch.c.obj
+[109/119] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/wifi_sta.c.obj
+[110/119] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D D:\example\projects\Esp32Walker\firmware\build\bootloader && C:\Users\jwgbo\.espressif\python_env\idf6.1_py3.10_env\Scripts\python.exe E:/esp/v6.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 D:/example/projects/Esp32Walker/firmware/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5820 bytes. 0x27e0 bytes (31%) free.
+[111/119] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app_main.c.obj
+D:/example/projects/Esp32Walker/firmware/main/app_main.c:84:13: warning: 'imu_setup' defined but not used [-Wunused-function]
+   84 | static void imu_setup(void)
+      |             ^~~~~~~~~
+D:/example/projects/Esp32Walker/firmware/main/app_main.c:72:13: warning: 'proximity_setup' defined but not used [-Wunused-function]
+   72 | static void proximity_setup(void)
+      |             ^~~~~~~~~~~~~~~
+D:/example/projects/Esp32Walker/firmware/main/app_main.c:49:13: warning: 'chassis_setup' defined but not used [-Wunused-function]
+   49 | static void chassis_setup(void)
+      |             ^~~~~~~~~~~~~
+[112/119] No install step for 'bootloader'
+[113/119] Linking C static library esp-idf\main\libmain.a
+[114/119] Completed 'bootloader'
+[115/119] Generating esp-idf/esp_system/ld/sections.ld
+NOTE: E:/esp/v6.1/esp-idf/components/bt/host/nimble/Kconfig.in:1428: 
+BT_NIMBLE_MESH_PROVISIONER: 'default 0' is not a valid bool value (only 'y' and
+'n' are allowed). Value is treated as 'n'.
+NOTE: E:/esp/v6.1/esp-idf/components/fatfs/Kconfig:240: FATFS_PRINT_LLI: 
+'default 0' is not a valid bool value (only 'y' and 'n' are allowed). Value is 
+treated as 'n'.
+NOTE: E:/esp/v6.1/esp-idf/components/fatfs/Kconfig:245: FATFS_PRINT_FLOAT: 
+'default 0' is not a valid bool value (only 'y' and 'n' are allowed). Value is 
+treated as 'n'.
+[116/119] Building C object CMakeFiles/esp32walker.elf.dir/project_elf_src_esp32s3.c.obj
+[117/119] Linking CXX executable esp32walker.elf
+[118/119] Generating binary image from built executable
+esptool v5.4.0
+Creating ESP32-S3 image...
+Merged 3 ELF sections.
+Successfully created ESP32-S3 image.
+Generated D:/example/projects/Esp32Walker/firmware/build/esp32walker.bin
+[119/119] C:\WINDOWS\system32\cmd.exe /C "cd /D D:\example\projects\Esp32Walker\firmware\build && C:\Users\jwgbo\.espressif\python_env\idf6.1_py3.10_env\Scripts\python.exe E:/esp/v6.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/example/projects/Esp32Walker/firmware/build/partition_table/partition-table.bin D:/example/projects/Esp32Walker/firmware/build/esp32walker.bin"
+esp32walker.bin binary size 0xccfa0 bytes. Smallest app partition is 0x400000 bytes. 0x333060 bytes (80%) free.

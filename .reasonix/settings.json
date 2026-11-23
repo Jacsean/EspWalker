@@ -1,0 +1,28 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "command": "node .reasonix/skills/design-along/scripts/prompt-trigger.js",
+        "description": "design-along: keyword reminder"
+      }
+    ],
+    "PostToolUse": [
+      {
+        "command": "node .reasonix/skills/design-along/scripts/post-bash.js",
+        "description": "design-along: suggest after commit"
+      }
+    ],
+    "Stop": [
+      {
+        "command": "node .reasonix/skills/design-along/scripts/stop-candidates.js",
+        "description": "design-along: candidate list on turn end"
+      }
+    ],
+    "SessionStart": [
+      {
+        "command": "node .reasonix/skills/design-along/scripts/session-start.js",
+        "description": "design-along: inject head index"
+      }
+    ]
+  }
+}

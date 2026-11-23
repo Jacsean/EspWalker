@@ -1,0 +1,7 @@
+-mlongcalls
+-fno-builtin-memcpy
+-fno-builtin-memset
+-fno-builtin-bzero
+-mdisable-hardware-atomics
+"-specs=D:/example/projects/Esp32Walker/firmware/build/specs/picolibc.specs"
+-fno-rtti

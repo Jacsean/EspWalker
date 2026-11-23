@@ -1,0 +1,11 @@
+# Esp32Walker 中心端依赖
+# 基础运行（TCP 服务 / 帧协议 / 运动与拍照指令）仅需 Python 3.10+ 标准库，无需安装。
+
+# 可选：LLM 对话（改用 requests 亦可，当前 llm.py 用标准库 urllib）
+# requests>=2.31
+
+# 可选：本地语音识别
+# openai-whisper
+
+# 可选：语音合成（需配合 ffmpeg 转 PCM16）
+# edge-tts

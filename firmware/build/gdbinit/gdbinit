@@ -1,0 +1,2 @@
+source D:/example/projects/Esp32Walker/firmware/build/gdbinit/symbols
+source D:/example/projects/Esp32Walker/firmware/build/gdbinit/connect

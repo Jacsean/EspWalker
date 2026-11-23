@@ -1,0 +1,7 @@
+dependencies:
+  idf: ">=6.1"
+  espressif/cjson: "^1.7.19"
+  # 启用摄像头时取消注释（并打开 CONFIG_APP_ENABLE_CAMERA）：
+  # espressif/esp32-camera: "^2.0.15"
+  # 启用本地唤醒词时取消注释（并打开 CONFIG_APP_ENABLE_WAKE）：
+  # espressif/esp-sr: "^1.9.0"
