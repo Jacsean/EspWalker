@@ -177,8 +177,8 @@
 		"D:/example/projects/Esp32Walker/firmware/build/esp-idf/audio/cmake_install.cmake",
 		"D:/example/projects/Esp32Walker/firmware/build/esp-idf/motor/cmake_install.cmake",
 		"D:/example/projects/Esp32Walker/firmware/build/esp-idf/chassis/cmake_install.cmake",
-		"D:/example/projects/Esp32Walker/firmware/build/esp-idf/proximity/cmake_install.cmake",
 		"D:/example/projects/Esp32Walker/firmware/build/esp-idf/imu/cmake_install.cmake",
+		"D:/example/projects/Esp32Walker/firmware/build/esp-idf/proximity/cmake_install.cmake",
 		"D:/example/projects/Esp32Walker/firmware/build/esp-idf/espnow/cmake_install.cmake",
 		"D:/example/projects/Esp32Walker/firmware/build/esp-idf/espressif__cjson/cmake_install.cmake",
 		"D:/example/projects/Esp32Walker/firmware/build/esp-idf/main/cmake_install.cmake"

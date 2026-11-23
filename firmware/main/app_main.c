@@ -72,11 +72,15 @@ static void chassis_setup(void)
 static void proximity_setup(void)
 {
     proximity_config_t pc = {
+        .sensor = (prox_sensor_t)BOARD_PROX_SENSOR,
         .trig_gpio = BOARD_ULTRASONIC_TRIG,
         .echo_gpio = BOARD_ULTRASONIC_ECHO,
+        .i2c_sda = BOARD_TOF_SDA,
+        .i2c_scl = BOARD_TOF_SCL,
+        .i2c_addr = 0x29,
         .stop_cm = g_stop_cm,
         .slow_cm = g_slow_cm,
-        .max_cm = 400,
+        .max_cm = BOARD_PROX_MAX_CM,
     };
     ESP_ERROR_CHECK(proximity_init(&pc, &g_prox));
 }
@@ -216,8 +220,8 @@ static void motion_sensor_task(void *arg)
 static void motion_run(void)
 {
     chassis_setup();
+    imu_setup();        /* 先初始化 IMU（创建 I2C 总线），供 TOF 复用 */
     proximity_setup();
-    imu_setup();
 
     now_config_t nc = {
         .is_master = false,

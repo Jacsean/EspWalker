@@ -9,6 +9,7 @@
 
 #include <stdint.h>
 #include "esp_err.h"
+#include "driver/i2c_master.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -31,6 +32,9 @@ esp_err_t imu_init(const imu_config_t *cfg);
 
 /** @brief 读取一次数据并更新姿态角。 */
 esp_err_t imu_read(imu_data_t *out);
+
+/** @brief 返回 IMU 创建的 I2C 总线句柄（未初始化时返回 NULL），供 TOF 等外设复用。 */
+i2c_master_bus_handle_t imu_get_bus(void);
 
 #ifdef __cplusplus
 }

@@ -213,6 +213,7 @@ D:/example/projects/Esp32Walker/firmware/build/esp-idf/motor/libmotor.a
 D:/example/projects/Esp32Walker/firmware/build/esp-idf/esp_driver_ledc/libesp_driver_ledc.a
 D:/example/projects/Esp32Walker/firmware/build/esp-idf/chassis/libchassis.a
 D:/example/projects/Esp32Walker/firmware/build/esp-idf/motor/libmotor.a
+D:/example/projects/Esp32Walker/firmware/build/esp-idf/imu/libimu.a
 D:/example/projects/Esp32Walker/firmware/build/esp-idf/proximity/libproximity.a
 D:/example/projects/Esp32Walker/firmware/build/esp-idf/imu/libimu.a
 D:/example/projects/Esp32Walker/firmware/build/esp-idf/espnow/libespnow.a
@@ -223,6 +224,5 @@ D:/example/projects/Esp32Walker/firmware/build/esp-idf/camera/libcamera.a
 D:/example/projects/Esp32Walker/firmware/build/esp-idf/audio/libaudio.a
 D:/example/projects/Esp32Walker/firmware/build/esp-idf/chassis/libchassis.a
 D:/example/projects/Esp32Walker/firmware/build/esp-idf/proximity/libproximity.a
-D:/example/projects/Esp32Walker/firmware/build/esp-idf/imu/libimu.a
 D:/example/projects/Esp32Walker/firmware/build/esp-idf/espnow/libespnow.a
 D:/example/projects/Esp32Walker/firmware/build/esp-idf/espressif__cjson/libespressif__cjson.a

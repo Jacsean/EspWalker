@@ -9,7 +9,8 @@ Esp32Walker/
 │  ├─ 01-architecture.md         # 总体架构
 │  ├─ 02-hardware.md             # 硬件设计方案
 │  ├─ 03-protocol.md             # 通信协议
-│  └─ 04-software.md             # 本文档
+│  ├─ 04-software.md             # 本文档
+│  └─ 05~09                      # 硬件清单/装配/调试/双板方案与作业指导
 ├─ firmware/                     # ESP32-S3 固件（ESP-IDF v6.1）
 │  ├─ CMakeLists.txt
 │  ├─ sdkconfig.defaults         # 项目基线配置（引脚/分区/开关）
@@ -28,6 +29,8 @@ Esp32Walker/
 │     ├─ proximity/              # 障碍感知 + 本地避障闭环
 │     ├─ camera/                 # 拍照（可选，需 esp32-camera）
 │     ├─ audio/                  # 语音采集/播放（可选，含唤醒词预留）
+│     ├─ imu/                    # 6 轴 IMU + 姿态解算
+│     ├─ espnow/                 # 双板 ESP-NOW 通信（master/slave）
 │     └─ comm/                   # TCP 客户端 + 帧协议编解码
 └─ host/                         # 中心端（PC 上位机，Python）
    ├─ main.py                    # TCP 服务端入口
@@ -48,19 +51,19 @@ Esp32Walker/
 | `proximity` | `esp_driver_gpio`（TOF 时 `esp_driver_i2c`） | 多路测距 + 阈值判定 + 避障回调 |
 | `camera` | `espressif__esp32-camera`（可选） | 抓帧 JPEG，回调上传 |
 | `audio` | `esp_driver_i2s` | I2S 录音 / 放音；唤醒词预留 ESP-SR |
-| `comm` | `esp_wifi` `esp_netif` `json`(cJSON) `lwip` | TCP 客户端、帧编解码、收发队列 |
+| `imu` | `esp_driver_i2c` `esp_timer` | 6 轴读取 + 互补滤波姿态解算 |
+| `espnow` | `esp_wifi` `esp_netif` `esp_event` | 双板配对 + now_msg_t 收发 |
+| `comm` | `esp_wifi` `esp_netif` `espressif__cjson` `lwip` | TCP 客户端、帧编解码、收发队列 |
 
 ### 2.2 主任务模型（FreeRTOS）
 
 ```
-app_main
- ├─ nvs / 日志 / 外设初始化
- ├─ comm 启动：Wi-Fi STA 连网 → 连中心端 TCP
- ├─ 任务：comm_rx_task    解析下行指令 → 分发
- ├─ 任务：comm_tx_task    从发送队列取帧 → 写出
- ├─ 任务：sensor_task     周期采样距离 → 避障判定 → 上发 status/proximity
- └─ 任务：app 主循环      按钮/心跳/看门狗
-（camera / audio 任务按需由指令拉起，见组件实现）
+app_main（按 CONFIG_APP_ROLE 分支）
+ ├─ master（ES3N28P）：wifi_sta + comm(TCP 连 PC) + espnow(主控中转)
+ │    PC 指令 → ESP-NOW 下发从机；从机 status/proximity → TCP 上发 PC
+ └─ motion（GOOUUU）：chassis + proximity + imu + espnow(从机)
+      本地避障闭环 + IMU 翻倒保护，状态经 ESP-NOW 回传主控
+（camera / audio 任务按需由指令拉起；单板角色逻辑见 cmd_dispatch.c）
 ```
 
 ### 2.3 关键配置（sdkconfig.defaults）
@@ -69,7 +72,8 @@ app_main
 - 分区表：`partitions.csv`（factory 4 MB + nvs + coredump，预留 OTA 注释）
 - Wi-Fi：SSID / 密码 / 中心端 IP / 端口
 - 引脚：全部经 `board.h` 宏映射，`sdkconfig.defaults` 用 `CONFIG_APP_*` 键配置
-- 开关：`CONFIG_APP_ENABLE_CAMERA`、`CONFIG_APP_ENABLE_AUDIO`、`CONFIG_APP_ENABLE_WAKE` 默认关闭，避免离线拉依赖
+- 角色：`CONFIG_APP_ROLE`（master/motion），menuconfig → Board role 切换，各编一个 bin
+- 开关：`CONFIG_APP_ENABLE_CAMERA`、`CONFIG_APP_ENABLE_AUDIO`、`CONFIG_APP_ENABLE_WAKE` 默认关闭，避免离线拉依赖；`CONFIG_APP_ENABLE_IMU` 默认开启
 
 ## 3. 固件构建 / 烧录
 
@@ -114,7 +118,7 @@ python main.py --config config.json      # 监听 0.0.0.0:8888
 
 | 扩展 | 做法 |
 |---|---|
-| 多板（感知板/底盘板） | 从板经 UART/ESP-NOW 上报，主控 `comm` 侧新增帧类型，见 `02-hardware.md §10` |
+| 多板（主控+运动） | 双板已实现：ESP-NOW 互联，见 `08-dual-board.md` |
 | 更换云端模型 | 改 `host/llm.py` 适配层，固件无需改动 |
 | OTA 升级 | `partitions.csv` 切双 OTA 表 + `CONFIG_BOOTLOADER_APP_ROLLBACK_ENABLE=y`（见 esp32-idf-dev 手册） |
 | 落卡存储 | 摄像头 JPEG 旁路写 SD（`esp_vfs_fat_sdcard` 组件） |

@@ -142,3 +142,8 @@ esp_err_t imu_read(imu_data_t *out)
     out->yaw = s_yaw;
     return ESP_OK;
 }
+
+i2c_master_bus_handle_t imu_get_bus(void)
+{
+    return s_bus;
+}

@@ -72,6 +72,7 @@ python main.py --config config.json
 - [docs/06-assembly.md](docs/06-assembly.md) — 装配作业指导书
 - [docs/07-poweron.md](docs/07-poweron.md) — 通电调试作业指导书
 - [docs/08-dual-board.md](docs/08-dual-board.md) — 双板方案（ES3N28P 主控 + GOOUUU 运动板）
+- [docs/09-dual-board-guide.md](docs/09-dual-board-guide.md) — 双板作业指导（两板 BOM/装配/通电/调试）
 
 ## 通信协议
 

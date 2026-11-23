@@ -1,6 +1,10 @@
-# 03 · 通信协议（ESP32 ⇄ 中心端）
+# 03 · 通信协议（协议 A：中心端 ⇄ ESP32 主控）
 
-传输层：**TCP**（默认端口 `8888`）。ESP32-S3 作为客户端，主动连接中心端（手机 / PC）。
+> **协议分层**：本项目有两层通信协议，勿混淆——
+> - **协议 A（本文档）**：TCP + JSON/二进制帧，PC/手机中心端 ⇄ ESP32 主控板（单板=DevKitC-1，双板=ES3N28P）。
+> - **协议 B**：ESP-NOW，ES3N28P 主控 ⇄ GOOUUU 运动板，见 `08-dual-board.md §4`。
+
+传输层：**TCP**（默认端口 `8888`）。ESP32 主控作为客户端，主动连接中心端（手机 / PC）。
 中心端地址可在固件 `sdkconfig.defaults` 配置，或通过 mDNS / UDP 广播自动发现（见 `04-software.md`）。
 
 ## 1. 帧格式
@@ -47,11 +51,12 @@
 
 ### hello — 连接握手
 ```json
-{ "t":"hello", "id":1, "fw":"esp32walker/0.1", "board":"esp32s3-n16r8",
-  "chassis":"diff2", "sensors":["tof","button"], "cap":["image","audio","wake"] }
+{ "t":"hello", "id":1, "fw":"esp32walker/0.2", "board":"esp32s3-n16r8",
+  "chassis":"diff2", "cap":["image","audio"], "imu":true }
 ```
 - `chassis`：`diff2`（两轮差速）/ `track`（履带）/ `mecanum`（麦克纳姆四轮）。
-- `cap`：能力位图，中心端据此决定是否下发拍照 / 录音 / 唤醒配置。
+- `cap`：能力位图，中心端据此决定是否下发拍照 / 录音配置。
+- `imu`：是否启用 IMU。
 
 ### ack — 指令应答
 ```json
@@ -59,10 +64,11 @@
 ```
 `code`：`0` 成功；非 0 为错误码（`1` 参数非法、`2` 忙、`3` 不支持、`4` 硬件故障）。
 
-### status — 周期状态（默认 1 s 一次，可 `config` 调整）
+### status — 周期状态（默认 1 s 一次）
 ```json
-{ "t":"status", "id":2, "moving":false, "dist_cm":120, "batt_mv":4100, "temp_c":45 }
+{ "t":"status", "id":2, "moving":false, "dist_cm":120, "roll":0.5, "pitch":-1.2, "yaw":87.3 }
 ```
+`roll/pitch/yaw` 为 IMU 姿态角（度），未启用 IMU 时为 0。
 
 ### proximity — 障碍距离事件（越过阈值时）
 ```json

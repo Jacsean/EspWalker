@@ -213,8 +213,9 @@ $<TARGET_FILE:idf::motor>
 $<TARGET_FILE:__idf_esp_driver_ledc>
 $<TARGET_FILE:idf::chassis>
 $<TARGET_FILE:__idf_motor>
-$<TARGET_FILE:idf::proximity>
 $<TARGET_FILE:idf::imu>
+$<TARGET_FILE:idf::proximity>
+$<TARGET_FILE:__idf_imu>
 $<TARGET_FILE:idf::espnow>
 $<TARGET_FILE:idf::espressif__cjson>
 $<TARGET_FILE:idf::main>
@@ -223,6 +224,5 @@ $<TARGET_FILE:__idf_camera>
 $<TARGET_FILE:__idf_audio>
 $<TARGET_FILE:__idf_chassis>
 $<TARGET_FILE:__idf_proximity>
-$<TARGET_FILE:__idf_imu>
 $<TARGET_FILE:__idf_espnow>
 $<TARGET_FILE:__idf_espressif__cjson>

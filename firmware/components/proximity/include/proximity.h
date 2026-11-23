@@ -1,10 +1,10 @@
 /**
  * @file proximity.h
- * @brief 障碍物感知：超声测距（HC-SR04）+ 距离分级。
- *        如需 VL53L0X TOF，可在此接口后扩展 I2C 实现。
+ * @brief 障碍物感知：超声（HC-SR04）/ TOF（VL53L0X）测距 + 距离分级。
  */
 #pragma once
 
+#include <stdint.h>
 #include "esp_err.h"
 
 #ifdef __cplusplus
@@ -17,12 +17,21 @@ typedef enum {
     PROX_STOP = 2, /**< 停车区 */
 } prox_level_t;
 
+typedef enum {
+    PROX_SENSOR_ULTRASONIC = 0, /**< HC-SR04 超声（GPIO） */
+    PROX_SENSOR_TOF = 1,        /**< VL53L0X TOF（I2C） */
+} prox_sensor_t;
+
 typedef struct {
-    int trig_gpio; /**< 超声 Trig（-1 表示未接超声） */
-    int echo_gpio; /**< 超声 Echo */
-    int stop_cm;   /**< 停车阈值（cm） */
-    int slow_cm;   /**< 减速阈值（cm） */
-    int max_cm;    /**< 有效量程上限（cm） */
+    prox_sensor_t sensor; /**< 传感器类型 */
+    int trig_gpio;        /**< 超声 Trig（超声用） */
+    int echo_gpio;        /**< 超声 Echo（超声用） */
+    int i2c_sda;          /**< TOF I2C SDA（TOF 用） */
+    int i2c_scl;          /**< TOF I2C SCL（TOF 用） */
+    uint8_t i2c_addr;     /**< TOF I2C 地址（0x29） */
+    int stop_cm;          /**< 停车阈值（cm） */
+    int slow_cm;          /**< 减速阈值（cm） */
+    int max_cm;           /**< 有效量程上限（cm） */
 } proximity_config_t;
 
 typedef void *proximity_handle_t;

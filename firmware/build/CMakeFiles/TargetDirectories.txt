@@ -1226,13 +1226,6 @@ D:/example/projects/Esp32Walker/firmware/build/esp-idf/chassis/CMakeFiles/list_i
 D:/example/projects/Esp32Walker/firmware/build/esp-idf/chassis/CMakeFiles/install.dir
 D:/example/projects/Esp32Walker/firmware/build/esp-idf/chassis/CMakeFiles/install/local.dir
 D:/example/projects/Esp32Walker/firmware/build/esp-idf/chassis/CMakeFiles/install/strip.dir
-D:/example/projects/Esp32Walker/firmware/build/esp-idf/proximity/CMakeFiles/__idf_proximity.dir
-D:/example/projects/Esp32Walker/firmware/build/esp-idf/proximity/CMakeFiles/edit_cache.dir
-D:/example/projects/Esp32Walker/firmware/build/esp-idf/proximity/CMakeFiles/rebuild_cache.dir
-D:/example/projects/Esp32Walker/firmware/build/esp-idf/proximity/CMakeFiles/list_install_components.dir
-D:/example/projects/Esp32Walker/firmware/build/esp-idf/proximity/CMakeFiles/install.dir
-D:/example/projects/Esp32Walker/firmware/build/esp-idf/proximity/CMakeFiles/install/local.dir
-D:/example/projects/Esp32Walker/firmware/build/esp-idf/proximity/CMakeFiles/install/strip.dir
 D:/example/projects/Esp32Walker/firmware/build/esp-idf/imu/CMakeFiles/__idf_imu.dir
 D:/example/projects/Esp32Walker/firmware/build/esp-idf/imu/CMakeFiles/edit_cache.dir
 D:/example/projects/Esp32Walker/firmware/build/esp-idf/imu/CMakeFiles/rebuild_cache.dir
@@ -1240,6 +1233,13 @@ D:/example/projects/Esp32Walker/firmware/build/esp-idf/imu/CMakeFiles/list_insta
 D:/example/projects/Esp32Walker/firmware/build/esp-idf/imu/CMakeFiles/install.dir
 D:/example/projects/Esp32Walker/firmware/build/esp-idf/imu/CMakeFiles/install/local.dir
 D:/example/projects/Esp32Walker/firmware/build/esp-idf/imu/CMakeFiles/install/strip.dir
+D:/example/projects/Esp32Walker/firmware/build/esp-idf/proximity/CMakeFiles/__idf_proximity.dir
+D:/example/projects/Esp32Walker/firmware/build/esp-idf/proximity/CMakeFiles/edit_cache.dir
+D:/example/projects/Esp32Walker/firmware/build/esp-idf/proximity/CMakeFiles/rebuild_cache.dir
+D:/example/projects/Esp32Walker/firmware/build/esp-idf/proximity/CMakeFiles/list_install_components.dir
+D:/example/projects/Esp32Walker/firmware/build/esp-idf/proximity/CMakeFiles/install.dir
+D:/example/projects/Esp32Walker/firmware/build/esp-idf/proximity/CMakeFiles/install/local.dir
+D:/example/projects/Esp32Walker/firmware/build/esp-idf/proximity/CMakeFiles/install/strip.dir
 D:/example/projects/Esp32Walker/firmware/build/esp-idf/espnow/CMakeFiles/__idf_espnow.dir
 D:/example/projects/Esp32Walker/firmware/build/esp-idf/espnow/CMakeFiles/edit_cache.dir
 D:/example/projects/Esp32Walker/firmware/build/esp-idf/espnow/CMakeFiles/rebuild_cache.dir
